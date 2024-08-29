@@ -1,0 +1,168 @@
+@charset "utf-8";
+
+/* CSS Document */
+/*  setting all color and size variables  */
+:root {
+	--color-light: #f5f7fa;
+	--color-dark: #171e23;
+	--color-orange: #ff7f0e;
+	--color-grey: #bdc3c7;
+	--color-green: #1abc9c;
+	--color-red: #e74c3c;
+	--size-2xs: 0.3rem;
+	--size-xs: 0.5rem;
+	--size-sm: 0.8rem;
+	--size-nm: 1rem;
+	--size-lg: 1.5rem;
+	--size-xl: 2rem;
+	--size-2xl: 4rem;
+	--size-3xl: 10rem;
+}
+
+/* setting default margin and padding to 0 */
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Quantico';
+}
+
+header {
+	font-size: var(--size-2xl);
+	margin-top: var(--size-sm);
+	text-align: center;
+	color: var(--color-light);
+	text-shadow: var(--color-grey) var(--size-2xs) var(--size-2xs) 10px;
+}
+body {
+	background-color: var(--color-dark);
+}
+
+main {	
+	/* set the forms in the middle */
+	margin-left: var(--size-3xl);
+	margin-right: var(--size-3xl);
+}
+
+#maindiv {
+	/* make the section into a flex box instead of inline*/
+	display: flex;
+	justify-content: space-around;
+}
+
+form h1 {
+	font-size: var(--size-xl);
+	text-shadow: var(--color-grey) var(--size-2xs) var(--size-2xs) 5px;
+}
+
+form {
+	background-color: var(--color-light);
+	margin: var(--size-nm);
+	display: flex;
+	align-items: center;
+	/* make it arrange vertical */
+	flex-direction: column;
+	/* add top and bottom padding and let left and right padding untouch */
+	padding: var(--size-xl) 0;
+	/* make the edge of the form round */
+	border-radius: 25px;
+	/* add a shadow for the form to looks like a 3D */
+	box-shadow: var(--color-grey) var(--size-xs) var(--size-xs);
+	width: 22rem;
+}
+
+form input, form textarea {
+	padding: var(--size-lg);
+	/* clear the border  */
+	border: 0;
+	/* add a margin between the typing areas */
+	margin: var(--size-nm);
+	background-color: var(--color-grey);
+	font-size: var(--size-nm);
+	color: var(--color-dark);
+	/* make the corner of typing area curve */
+	border-radius: 5px;
+}
+
+.btn {
+	font-weight: bold;
+	background-color: var(--color-orange);
+	color: var(--color-light);
+	margin-top: var(--size-sm);
+	padding: var(--size-2xs);
+	/* set the button to have round corner */
+	border-radius: 10px;
+	width: var(--size-2xl);
+	cursor: pointer;
+	box-shadow: 0 var(--size-2xs) 5px rgba(255, 127, 14, 0.5);
+}
+
+.btn:hover {
+	/* button will change into grey color when hover */
+	background-color: var(--color-grey);
+	/* button will move up when hover */
+	transform: translateY(-5px);
+	/* text color will change too */
+	color: var(--color-dark);
+}
+
+.budget_main_container {
+	border-radius: 5px;
+	background-color: var(--color-grey);
+	box-shadow: var(--size-2xs) var(--size-2xs) 5px var(--color-dark);
+	margin: var(--size-xl);
+	padding: var(--size-lg);
+}
+
+h3 {
+	text-align: center;
+	margin-bottom: var(--size-2xs);
+	text-shadow: var(--color-light) var(--size-2xs) var(--size-2xs) 5px;
+}
+
+#income, #expenses, #balance {
+	text-align: center;
+	color: var(--color-light);
+	margin-bottom: var(--size-nm);
+	font-weight: bolder;
+}
+#income, #income_li {
+	color: var(--color-green);
+}
+
+#expenses, #expenses_li {
+	color: var(--color-red);
+}
+
+.budget_second_container {
+	display: flex;
+}
+
+h2 {
+	text-shadow: var(--color-grey) var(--size-2xs) var(--size-2xs) 5px;
+	text-align: center;
+}
+
+.budget_li {
+	margin: var(--size-2xs);
+}
+
+.investment_input ::placeholder {
+	/* to show the whole placeholder in the input area */
+	font-size: var(--size-sm); 
+}
+
+label {
+	font-weight: bold;
+}
+
+form select {
+	background-color: var(--color-grey);
+	font-size: var(--size-nm);
+	margin: var(--size-nm);
+	color: var(--color-dark);
+	border-radius: 5px;
+}
+
+#message {
+	margin-top: var(--size-lg);
+}

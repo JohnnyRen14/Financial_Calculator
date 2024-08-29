@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Financial Helper</title>
+    <link rel="stylesheet" href="FinancialStyle.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Quantico&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <p>Your Financial Helper</p>
+    </header>
+    <main>
+        <div id="maindiv">
+            <div>
+                <form>
+                    <h1><strong>Income Tracker</strong></h1>
+                    <input id="income_desc" type="text" placeholder="Enter The Description" required />
+                    <input id="income_amount" type="number" placeholder="Enter The Amount" required />
+                    <button class="btn" id="Income_btn">Submit</button>
+                </form>
+                <form>
+                    <h1><strong>Expenses Tracker</strong></h1>
+                    <input id="expenses_desc" type="text" placeholder="Enter The Description" required />
+                    <input id="expenses_amount" type="number" placeholder="Enter The Amount" required />
+                    <button class="btn" id="Expenses_btn">Submit</button>
+                </form>
+            </div>
+            <form>
+                <h1><strong>Cash Flow Budget</strong></h1>
+                <div class="budget_main_container">
+                    <div>
+                        <h3>Total Income</h3>
+                        <div id="income"></div>
+                    </div>
+                    <div>
+                        <h3>Total Expenses</h3>
+                        <div id="expenses"></div>
+                    </div>
+                    <div>
+                        <h3>Balance</h3>
+                        <div id="balance"></div>
+                    </div>
+                </div>
+                <div class="budget_second_container">
+                    <div class="budget_li">
+                        <h2>Income</h2>
+                        <div class="list_container" id="income_li"></div>
+                    </div>
+                    <div class="budget_li">
+                        <h2>Expenses</h2>
+                        <div class="list_container" id="expenses_li"></div>
+                    </div>
+                </div>
+            </form>
+            <form>
+                <h1><strong>Investment Planner</strong></h1>
+                <div class="investment_input">
+                    <input type="number" id="initialamount" placeholder="Enter Initial Amount" />
+                </div>
+                <div class="investment_input">
+                    <input type="number" id="years" placeholder="Enter Investment Years" />
+                </div>
+                <div class="investment_input">
+                    <input type="number" id="rates" placeholder="Enter Return Rates (%)" />
+                </div>
+                <div class="investment_input">
+                    <input type="number" id="contribution" placeholder="Enter Contribution" />
+                </div>
+                <div class="input-group">
+                    <label for="compound">Invest Frequency:</label>
+                    <select id="compound">
+                        <option value="1">Annually</option>
+                        <option value="4">Quartely</option>
+                        <option value="12">Monthly</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <button class="btn" id="investment_btn">Submit</button>
+                </div>
+                <h3 id="message"></h3>
+            </form>
+        </div>
+    </main>
+    <script src="FinancialScript.js"></script>
+</body>
+
+</html>
